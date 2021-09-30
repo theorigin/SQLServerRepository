@@ -4,8 +4,8 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <DisableImplicitNamespaceImports>true</DisableImplicitNamespaceImports>
     <Nullable>enable</Nullable>
-    <AssemblyName>VS.SQLServerRepository</AssemblyName>
-    <RootNamespace>VS.SQLServerRepository</RootNamespace>
+    <AssemblyName>ViewSource.SQLServerRepository</AssemblyName>
+    <RootNamespace>ViewSource.SQLServerRepository</RootNamespace>
     <Company></Company>
     <Authors>Andy Robinson</Authors>
     <Description>Provides a fluent implementation of a SQL Server Repository.</Description>
