@@ -1,0 +1,12 @@
+D:\Dev\SqlServerRepository\SQLServerRepository.Tests\bin\Debug\net5.0\SQLServerRepository.Tests.deps.json
+D:\Dev\SqlServerRepository\SQLServerRepository.Tests\bin\Debug\net5.0\SQLServerRepository.Tests.dll
+D:\Dev\SqlServerRepository\SQLServerRepository.Tests\bin\Debug\net5.0\ref\SQLServerRepository.Tests.dll
+D:\Dev\SqlServerRepository\SQLServerRepository.Tests\bin\Debug\net5.0\SQLServerRepository.Tests.pdb
+D:\Dev\SqlServerRepository\SQLServerRepository.Tests\obj\Debug\net5.0\SQLServerRepository.Tests.csproj.AssemblyReference.cache
+D:\Dev\SqlServerRepository\SQLServerRepository.Tests\obj\Debug\net5.0\SQLServerRepository.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\SqlServerRepository\SQLServerRepository.Tests\obj\Debug\net5.0\SQLServerRepository.Tests.AssemblyInfoInputs.cache
+D:\Dev\SqlServerRepository\SQLServerRepository.Tests\obj\Debug\net5.0\SQLServerRepository.Tests.AssemblyInfo.cs
+D:\Dev\SqlServerRepository\SQLServerRepository.Tests\obj\Debug\net5.0\SQLServerRepository.Tests.csproj.CoreCompileInputs.cache
+D:\Dev\SqlServerRepository\SQLServerRepository.Tests\obj\Debug\net5.0\SQLServerRepository.Tests.dll
+D:\Dev\SqlServerRepository\SQLServerRepository.Tests\obj\Debug\net5.0\ref\SQLServerRepository.Tests.dll
+D:\Dev\SqlServerRepository\SQLServerRepository.Tests\obj\Debug\net5.0\SQLServerRepository.Tests.pdb

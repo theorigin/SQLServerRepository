@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <DisableImplicitNamespaceImports>true</DisableImplicitNamespaceImports>
+    <Nullable>enable</Nullable>
+    <AssemblyName>VS.SQLServerRepository</AssemblyName>
+    <RootNamespace>VS.SQLServerRepository</RootNamespace>
+    <Company></Company>
+    <Authors>Andy Robinson</Authors>
+    <Description>Provides a fluent implementation of a SQL Server Repository.</Description>
+    <PackageProjectUrl>https://github.com/theorigin/SQLServerRepository</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/theorigin/SQLServerRepository</RepositoryUrl>
+    <PackageTags>sql server; fluent; sqlconnection; sqlcommand; dapper</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.1" />
+  </ItemGroup>
+
+</Project>

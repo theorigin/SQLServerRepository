@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Dev\\SqlServerRepository\\SQLServerRepository.Tests\\SQLServerRepository.Tests.csproj": {}
+  },
+  "projects": {
+    "D:\\Dev\\SqlServerRepository\\SQLServerRepository.Tests\\SQLServerRepository.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\SqlServerRepository\\SQLServerRepository.Tests\\SQLServerRepository.Tests.csproj",
+        "projectName": "SQLServerRepository.Tests",
+        "projectPath": "D:\\Dev\\SqlServerRepository\\SQLServerRepository.Tests\\SQLServerRepository.Tests.csproj",
+        "packagesPath": "C:\\Users\\Andy\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\SqlServerRepository\\SQLServerRepository.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Andy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Dev\\NugetPackages": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://chatteringmonkey.pkgs.visualstudio.com/ChatteringMonkey/_packaging/private/nuget/v3/index.json": {},
+          "https://gitlab.com/api/v4/projects/20863912/packages/nuget/index.json": {},
+          "https://www.myget.org/F/andyrobinson/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
