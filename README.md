@@ -93,7 +93,7 @@ END
 
 ### Parameters
 
-If you need more control over parameters you can create them create them and add via `.AddParameter`. Here's an example of using an `InputOutput` parameter.
+If you need more control over parameters you can create them and add via `.AddParameter`. Here's an example of using an `InputOutput` parameter.
 
 ```sql
 var param = new SqlParameter("@barcode", SqlDbType.VarChar) { 
