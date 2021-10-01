@@ -19,8 +19,8 @@ ISqlServerRepository sqlRepo = new SqlServerRepository("Server=.;Initial Catalog
 ```C#
 var records = await sqlRepo
     	.WithSqlStatement("INSERT INTO Product (Name, Barcode, Cost) VALUES (@name, @barcode, @cost)")
-		.AddParameters(new { name = "Banana", barcode = "08765412", cost = .45 })
-		.Execute();
+	.AddParameters(new { name = "Banana", barcode = "08765412", cost = .45 })
+	.Execute();
 ```
 
 ### Update
@@ -28,21 +28,21 @@ var records = await sqlRepo
 ```C#
 var records = await sqlRepo
     	.WithSqlStatement("UPDATE Product SET Cost = Cost * 0.5")
-		.Execute();
+	.Execute();
 
 var records = await sqlRepo
     	.WithSqlStatement("UPDATE Product SET Cost = Cost * 0.5 WHERE Id = @productId")
     	.AddParameters(new { productId = 123 })
-		.Execute();
+	.Execute();
 ```
 
 ### Delete
 
 ```c#
 await sqlRepo
-		.WithSqlStatement("DELETE FROM Product WHERE Id = @productId")
+	.WithSqlStatement("DELETE FROM Product WHERE Id = @productId")
     	.AddParameters(new { productId = 123 })
-		.Execute();
+	.Execute();
 ```
 
 ### Select
@@ -61,7 +61,7 @@ IEnumerable<Product> products = await sqlRepo
 
 IEnumerable<Product> products = await sqlRepo
 		.WithSqlStatement("SELECT Id, Name, Barcode, Cost Price FROM Product WHERE Id = @productId")
-	    .AddParameters(new { productId = 123 })
+	    	.AddParameters(new { productId = 123 })
 		.Execute<Product>();
 ```
 
@@ -74,7 +74,7 @@ You can called stored procedures using the `.WithStoredProcedure` method.
 ```C#
 IEnumerable<Product> products = await sqlRepo
 		.WithStoredProcedure("Products_Get_ById")
-	    .AddParameters(new { productId = 123 })
+	    	.AddParameters(new { productId = 123 })
 		.Execute<Product>();
 ```
 
@@ -185,8 +185,8 @@ While a builder is a nice way to write reusable/testable code sometimes you won'
 
 ```c#
 await sqlRepo
-			.WithStoredProcedure("Products_GetAll")
-			.Execute<Product>(dataProvider => CreateProducts(dataProvider));
+	.WithStoredProcedure("Products_GetAll")
+	.Execute<Product>(dataProvider => CreateProducts(dataProvider));
 ```
 
 and `CreateProducts` is
