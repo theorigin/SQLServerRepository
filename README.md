@@ -1,5 +1,3 @@
-[![andyrobinson MyGet Build Status](https://www.myget.org/BuildSource/Badge/andyrobinson?identifier=9522c31d-4062-4dc6-b36a-593de3a39d87)](https://www.myget.org/)
-
 # SQL Server Repository
 
 A fluent SQL Server repository built over Dapper.  
