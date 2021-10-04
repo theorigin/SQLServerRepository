@@ -2,7 +2,8 @@
 
 A fluent SQL Server repository built over Dapper.  
 
-
+## Installation
+Available on NuGet - https://www.nuget.org/packages/ViewSource.SQLServerRepository/
 
 ## Usage
 
