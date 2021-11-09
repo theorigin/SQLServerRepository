@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 
-namespace VS.SQLServerRepository
+namespace ViewSource.SQLServerRepository
 {
     public interface ISqlRepository
     {

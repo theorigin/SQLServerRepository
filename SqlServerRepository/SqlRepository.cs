@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Data.SqlClient;
 
-namespace VS.SQLServerRepository
+namespace ViewSource.SQLServerRepository
 {
     public class SqlRepository : ISqlRepository
     {
@@ -73,7 +73,7 @@ namespace VS.SQLServerRepository
 		{
 			return await ExecuteToType<T>();
 		}
-
+		
 		public async Task<IEnumerable<T>> Execute<T>(IBuilder<T> builder)
         {
             return await ExecuteToType(builder);
@@ -139,12 +139,7 @@ namespace VS.SQLServerRepository
                 {
                     sqlCommand.Parameters.AddRange(Parameters.ToArray());
                 }
-
-                if (connection.State == ConnectionState.Closed)
-                {
-                    await connection.OpenAsync();
-                }
-
+				
                 if (_transaction != null)
                 {
                     sqlCommand.Transaction = _transaction;
@@ -154,7 +149,7 @@ namespace VS.SQLServerRepository
                 {
                     QueryType.ExecuteNonQuery => await sqlCommand.ExecuteNonQueryAsync(),
                     QueryType.ExecuteScalar => await sqlCommand.ExecuteScalarAsync(),
-                    QueryType.ExecuteNonQueryWithParam => await connection.ExecuteAsync(_cmdText, param),
+                    QueryType.ExecuteNonQueryWithParam => await connection.ExecuteAsync(_cmdText, param, commandType: _isStoredProc ? CommandType.StoredProcedure : CommandType.Text),
                     _ => throw new InvalidOperationException()
                 };
             }
@@ -186,7 +181,10 @@ namespace VS.SQLServerRepository
 			return sqlCommand;
 		}
 
-		private async Task<IEnumerable<T>> ExecuteToType<T>(IBuilder<T>? builder = null, Func<IDataProvider, IEnumerable<T>>? funcBuilder = null)
+		private async Task<IEnumerable<T>> ExecuteToType<T>(
+            IBuilder<T>? builder = null, 
+            Func<IDataProvider, IEnumerable<T>>? funcBuilder = null
+        )
 		{
 			var connection = _sqlConnection ?? CreateSqlConnection();
 			var createdConnection = _sqlConnection == null;

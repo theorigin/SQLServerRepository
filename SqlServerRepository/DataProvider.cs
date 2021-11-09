@@ -2,7 +2,7 @@
 using System.Linq;
 using Dapper;
 
-namespace VS.SQLServerRepository
+namespace ViewSource.SQLServerRepository
 {
     public class DataProvider : IDataProvider
     {

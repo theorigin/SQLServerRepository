@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Dapper;
 
-namespace VS.SQLServerRepository
+namespace ViewSource.SQLServerRepository
 {
     public interface IDataProvider
     {

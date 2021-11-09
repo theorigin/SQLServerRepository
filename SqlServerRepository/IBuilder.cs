@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace VS.SQLServerRepository
+namespace ViewSource.SQLServerRepository
 {
     public interface IBuilder<T>
     {
