@@ -1,10 +1,9 @@
-[![andyrobinson MyGet Build Status](https://www.myget.org/BuildSource/Badge/andyrobinson?identifier=9522c31d-4062-4dc6-b36a-593de3a39d87)](https://www.myget.org/)
-
 # SQL Server Repository
 
 A fluent SQL Server repository built over Dapper.  
 
-
+## Installation
+Available on NuGet - https://www.nuget.org/packages/ViewSource.SQLServerRepository/
 
 ## Usage
 
@@ -19,8 +18,8 @@ ISqlServerRepository sqlRepo = new SqlServerRepository("Server=.;Initial Catalog
 ```C#
 var records = await sqlRepo
     	.WithSqlStatement("INSERT INTO Product (Name, Barcode, Cost) VALUES (@name, @barcode, @cost)")
-		.AddParameters(new { name = "Banana", barcode = "08765412", cost = .45 })
-		.Execute();
+	.AddParameters(new { name = "Banana", barcode = "08765412", cost = .45 })
+	.Execute();
 ```
 
 ### Update
@@ -28,21 +27,21 @@ var records = await sqlRepo
 ```C#
 var records = await sqlRepo
     	.WithSqlStatement("UPDATE Product SET Cost = Cost * 0.5")
-		.Execute();
+	.Execute();
 
 var records = await sqlRepo
     	.WithSqlStatement("UPDATE Product SET Cost = Cost * 0.5 WHERE Id = @productId")
     	.AddParameters(new { productId = 123 })
-		.Execute();
+	.Execute();
 ```
 
 ### Delete
 
 ```c#
 await sqlRepo
-		.WithSqlStatement("DELETE FROM Product WHERE Id = @productId")
+	.WithSqlStatement("DELETE FROM Product WHERE Id = @productId")
     	.AddParameters(new { productId = 123 })
-		.Execute();
+	.Execute();
 ```
 
 ### Select
@@ -61,7 +60,7 @@ IEnumerable<Product> products = await sqlRepo
 
 IEnumerable<Product> products = await sqlRepo
 		.WithSqlStatement("SELECT Id, Name, Barcode, Cost Price FROM Product WHERE Id = @productId")
-	    .AddParameters(new { productId = 123 })
+	    	.AddParameters(new { productId = 123 })
 		.Execute<Product>();
 ```
 
@@ -74,7 +73,7 @@ You can called stored procedures using the `.WithStoredProcedure` method.
 ```C#
 IEnumerable<Product> products = await sqlRepo
 		.WithStoredProcedure("Products_Get_ById")
-	    .AddParameters(new { productId = 123 })
+	    	.AddParameters(new { productId = 123 })
 		.Execute<Product>();
 ```
 
@@ -93,9 +92,9 @@ END
 
 ### Parameters
 
-If you need more control over parameters you can create them create them and add via `.AddParameter`. Here's an example of using an `InputOutput` parameter.
+If you need more control over parameters you can create them and add via `.AddParameter`. Here's an example of using an `InputOutput` parameter.
 
-```sql
+```C#
 var param = new SqlParameter("@barcode", SqlDbType.VarChar) { 
 	Direction = ParameterDirection.InputOutput, Value = "01234567890" 
 };
@@ -185,8 +184,8 @@ While a builder is a nice way to write reusable/testable code sometimes you won'
 
 ```c#
 await sqlRepo
-			.WithStoredProcedure("Products_GetAll")
-			.Execute<Product>(dataProvider => CreateProducts(dataProvider));
+	.WithStoredProcedure("Products_GetAll")
+	.Execute<Product>(dataProvider => CreateProducts(dataProvider));
 ```
 
 and `CreateProducts` is
